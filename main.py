@@ -1,12 +1,3 @@
-from math import sqrt
-
-
-def root(number):
-    return sqrt(number)
-
-
-print(root(7))
-
 class Car:
     def __init__(self,make,model,year):
         self.make = make
@@ -84,7 +75,13 @@ class ToDoListManager:
             print("task deleted")
         else:
             print("task not found")
-
+    def edit_task(self,old_task,new_task):
+        if old_task in self.tasks:
+            index = self.tasks.index(old_task)
+            self.tasks[index] = new_task
+            print("task changed successfuly")
+        else:
+            print("task not found!")
 
 
 manager = ToDoListManager()
@@ -92,4 +89,21 @@ manager.add_task("Wash Dishes")
 manager.add_task("Cook Ugali")
 manager.add_task("Take a shower")
 manager.view_tasks()
+manager.edit_task("Wash Dishes","Clean Dishes")
+manager.view_tasks()
 manager.delete_task("Washroom")
+
+my_list = []
+my_list.append("oeeeee")
+my_list.append("ayeiyaa")
+
+for item in my_list:
+    print(item)
+
+my_list.append("niajee msela")
+index = my_list.index("ayeiyaa")
+my_list[index] = "buruburu"
+
+for item in my_list:
+    print(item)
+
