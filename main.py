@@ -107,3 +107,11 @@ my_list[index] = "buruburu"
 for item in my_list:
     print(item)
 
+#databases
+#bank account users
+db = {}
+user1 = dict(name='Bob Smith',age=42,pay=40000,job='software engineer')
+db['user1'] = user1
+
+print(db['user1'])
+print(db['user1']['name'])
